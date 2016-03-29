@@ -1,0 +1,90 @@
+<div class="login-layout">
+	<div>
+		<span class="amex_default heading">{{labelTxt.AMEX_Reg_Header}}</span>
+	</div>
+	<div class="progress_section" >
+		<div class="steps_panel">
+			<span ng-repeat="step in steps">
+				<div class="circle left" ng-class="{blue_bg: stepActive >= $index+1}">
+					<div>{{$index+1}}</div>
+					<div class="step_info" ng-class="{step_activ: stepActive == $index+1}">{{step}}</div>
+				</div>
+				<div ng-if="($index+1 < steps.length)" class="line left"><div></div></div>
+			</span>
+		</div>
+	</div>
+	<div class="users_section"  ng-switch on="stepActive">
+		<div ng-switch-when="1">
+		<!-- <div class="left width60"> -->
+		<div>
+			<div class="amex_default label">{{labelTxt.AMEX_Reg_User_ID_Label}}</div>
+			<div class="amex_input_box">
+			 <md-input-container class="amex_input_field">
+		        <label>{{labelTxt.AMEX_Reg_User_ID}}</label>
+		        <input ng-model="userDetails.name">
+		        <md-tooltip md-direction="right" class="customTooltip">
+		            Your User ID should:</br>
+					*Contain 5 to 20 characters - at least one letter (not case sensitive).</br>
+					*Contain no spaces or special characters (e.g., &, >, *, $, @).</br>
+		        </md-tooltip>
+		      </md-input-container>
+		    </div>
+		    <div class="amex_default label password_label">{{labelTxt.AMEX_Reg_Password_Label}}</div>
+			<div class="amex_input_box">
+			 <md-input-container class="amex_input_field">
+		        <label>{{labelTxt.AMEX_Reg_Password}}</label>
+		        <input type="password" ng-model="userDetails.password">
+		        <md-tooltip md-direction="right" class="customTooltip passwordTooltip">
+		            Your Password:</br>
+					*Must be different from your User ID.</br>
+					*Must contain 8 to 20 characters, including one letter and number.</br>
+					*May include the following characters: %,&, _, ?, #, =, -.</br>
+					*Your new password cannot have any spaces and will not be case sensitive
+		        </md-tooltip>
+		      </md-input-container>
+		    </div>
+		    <div class="amex_input_box">
+			 <md-input-container class="amex_input_field" >
+		        <label>{{labelTxt.AMEX_Reg_Confirm_Password}}</label>
+		        <input type="password">
+		         
+		      </md-input-container>
+		      
+		    </div>
+		</div>
+		<!-- <div class="right width40 user_info_sec">
+			<div>
+				<p style="  margin-top: 38px;">
+					Your User ID should:</br>
+					*Contain 5 to 20 characters - at least one letter (not case sensitive).</br>
+					*Contain no spaces or special characters (e.g., &, >, *, $, @).</br>
+				</p>
+				<p style="  margin-top: 120px;">
+					Your Password:</br>
+					*Must be different from your User ID.</br>
+					*Must contain 8 to 20 characters, including one letter and number.</br>
+					*May include the following characters: %,&, _, ?, #, =, -.</br>
+					*Your new password cannot have any spaces and will not be case sensitive</br>
+				</p>
+			</div>
+		</div> -->
+		</div>
+		<div ng-switch-when="2">
+			Coming Soon Security Questions
+		</div>
+		<div ng-switch-when="3">
+			Coming Soon Confirm Contact ID
+		</div>
+		<div ng-switch-when="4">
+			Coming Soon Confirmation
+		</div>
+	</div>
+
+	<div class="buttonSelction">
+		<div class="left width20"></div>
+		<div class="right width80">
+			<div class="btn cancel_btn" > {{labelTxt.AMEX_Reg_Cancel_btn}} </div>
+			<div class="btn save_btn" ng-click="saveNnext();"> {{labelTxt.AMEX_Reg_Save_btn}}</div>
+		</div>
+	</div>
+</div>

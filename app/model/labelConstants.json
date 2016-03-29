@@ -1,0 +1,15 @@
+{
+	"success" : true,
+	"data" : {
+		"AMEX_Reg_Header" : "First Time Walk-Through",
+		"AMEX_Reg_User_ID_Label" : "Please create a User ID:",
+		"AMEX_Reg_User_ID" : "User ID",
+		"AMEX_Reg_Password_Label" : "Please create a new password:",
+		"AMEX_Reg_Password" : "Enter Password",
+		"AMEX_Reg_Confirm_Password" : "Confirm Password",
+		"AMEX_Reg_Cancel_btn" : "Cancel",
+		"AMEX_Reg_Save_btn" : "Save @ Continue",
+		"AMEX_Reg_Password_Tooltip" : "Your Password:</br>*Must be different from your User ID.</br>*Must contain 8 to 20 characters, including one letter and number.</br>*May include the following characters: %,&, _, ?, #, =, -.</br>*Your new password cannot have any spaces and will not be case sensitive",
+		"AMEX_Reg_User_ID_Tooltip" : "Your User ID should:</br>*Contain 5 to 20 characters - at least one letter (not case sensitive).</br>*Contain no spaces or special characters (e.g., &, >, *, $, @).</br>"
+	}
+}

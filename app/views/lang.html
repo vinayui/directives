@@ -1,0 +1,25 @@
+<div class="login-layout">
+	<div>
+		<span class="amex_default heading">Welcome to American Express @Work</span>
+	</div>
+	<div style="height: 150px;"></div>
+	<div>
+		<span class="amex_default label">Please select a language to begin your enrollment process:</span>
+	</div>
+	<div>
+		<md-input-container class="langContainer">
+	        <md-select placeholder="Language Preference" ng-model="userLanguages" class="langselectbox">
+    			<md-option ng-repeat="language in languages" value="{{language.selValue}}">{{language.text}}</md-option>
+	        </md-select>
+	     </md-input-container>
+	</div>
+	<div style="height: 150px;"></div>
+	<div>
+	<div class="buttonSelction">
+		<div class="left width20"></div>
+		<div class="right width80">
+			<div class="btn cancel_btn" > Cancel </div>
+			<div class="btn save_btn" ng-click="saveLang();"> Save @ Continue</div>
+		</div>
+	</div>
+</div>
